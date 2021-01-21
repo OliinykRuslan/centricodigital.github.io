@@ -26,9 +26,13 @@ body {
 body {
   font-family: "Nexa";
   color: #4a4a4a;
+  margin: 0;
   // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   //   Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
   //   Arial, sans-serif;
+  &.page {
+    margin: 0;
+  }
 }
 a,
 a:hover,
@@ -41,6 +45,9 @@ button,
 button:hover {
   transition: all 0.5s;
   outline: none;
+}
+.btn:visited {
+  color: #fff;
 }
 ul {
   padding: 0;

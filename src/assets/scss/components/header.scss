@@ -211,6 +211,7 @@
   padding: 0.5rem 0.75rem;
   border: 1px solid transparent;
   background-color: transparent;
+  border: none;
   &:focus {
     outline: none;
   }
@@ -245,7 +246,7 @@
     box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
     position: fixed;
     transition: all 0.5s;
-    top: -100%;
+    top: -300px;
     left: 0;
     width: 100%;
     z-index: 11;

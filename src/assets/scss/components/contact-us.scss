@@ -15,7 +15,7 @@
     background: #7f00ff;
     border-radius: 6px;
     color: #fff;
-    padding: 40px;
+    padding: 40px 40px 25px;
     width: 100%;
     max-width: 500px;
     @media only screen and (max-width: 767px) {
@@ -26,7 +26,24 @@
     .form-group {
       position: relative;
       margin-bottom: 45px;
+      &.is-focus {
+        input {
+          outline: none;
+        }
+        .bar {
+          &::before,
+          &::after {
+            width: 50%;
+          }
+        }
+        label {
+          top: -20px;
+          left: -2px;
+          font-size: 12px;
+        }
+      }
     }
+
     .field-input {
       font-size: 18px;
       padding: 10px 10px 10px 5px;
@@ -36,21 +53,7 @@
       border-bottom: 1px solid #a9abac;
       background-color: transparent;
       color: #fff;
-      &:focus {
-        outline: none;
-        ~ .bar {
-          &::before,
-          &::after {
-            width: 50%;
-          }
-        }
-      }
-      &:valid ~ label,
-      &:focus ~ label {
-        top: -20px;
-        left: -2px;
-        font-size: 12px;
-      }
+      border-radius: 0;
     }
     .label-item {
       font-family: Arial;
@@ -124,13 +127,23 @@
         }
       }
     }
-    .btn {
+    p {
+      line-height: 1;
+      margin: 0;
+    }
+    .info-txt {
+      margin-bottom: 1rem;
+    }
+    .btn,
+    input[type="submit"] {
       max-width: 100%;
       width: 100%;
       justify-content: center;
       background-color: #fff;
       color: #555658;
       margin: 20px 0 0;
+      border-radius: 50px;
+      padding: 15px 30px;
       &:hover {
         box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42),
           0 4px 23px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
